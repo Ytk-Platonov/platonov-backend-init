@@ -48,6 +48,7 @@
 - **Номера (5):** 2 стандартных, 2 комфорта, 1 люкс.
 - **Бронирования (7):** Разные статусы (pending, confirmed, rejected) и даты (прошлые и будущие).
 
+ссылка на нейрослоп: https://chat.qwen.ai/s/t_ace7a7cb-6aec-46ea-ad23-044362634336
 ## ER-Диаграмма
 
 ```mermaid
@@ -85,5 +86,3 @@ erDiagram
         enum status "pending | confirmed | rejected"
         timestamp created_at "Дата создания заявки"
     }
-
-ссылка на нейрослоп: https://chat.qwen.ai/s/t_ace7a7cb-6aec-46ea-ad23-044362634336
