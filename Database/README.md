@@ -48,4 +48,42 @@
 - **Номера (5):** 2 стандартных, 2 комфорта, 1 люкс.
 - **Бронирования (7):** Разные статусы (pending, confirmed, rejected) и даты (прошлые и будущие).
 
+## ER-Диаграмма
+
+```mermaid
+erDiagram
+    Users ||--o{ Bookings : "has many"
+    Rooms ||--o{ Bookings : "has many"
+    
+    Users {
+        int id PK "Уникальный идентификатор"
+        varchar email UK "Email пользователя"
+        varchar password_hash "Хеш пароля (bcrypt)"
+        enum role "guest | admin"
+        timestamp created_at "Дата регистрации"
+    }
+    
+    Rooms {
+        int id PK "Уникальный идентификатор"
+        enum category "standard | comfort | lux"
+        varchar title "Название номера"
+        text description "Описание номера"
+        decimal price_per_night "Цена за ночь"
+        int capacity "Макс. вместимость"
+        boolean is_available "Доступен для бронирования"
+        varchar image_url "URL изображения"
+        timestamp created_at "Дата создания"
+    }
+    
+    Bookings {
+        int id PK "Уникальный идентификатор"
+        int user_id FK "Ссылка на Users"
+        int room_id FK "Ссылка на Rooms"
+        date check_in_date "Дата заезда"
+        date check_out_date "Дата выезда"
+        decimal total_price "Итоговая стоимость"
+        enum status "pending | confirmed | rejected"
+        timestamp created_at "Дата создания заявки"
+    }
+
 ссылка на нейрослоп: https://chat.qwen.ai/s/t_ace7a7cb-6aec-46ea-ad23-044362634336
