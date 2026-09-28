@@ -1,3 +1,6 @@
+const roomsRouter = require('./routes/rooms');
+app.use('/api/rooms', roomsRouter);
+=======
 const express = require('express');
 const cors = require('cors');
 
