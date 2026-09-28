@@ -1,1 +1,29 @@
-Владос пидорас
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Заявка получена</title>
+</head>
+<body style="font-family: Arial, sans-serif; background:#f4f4f4; padding:20px;">
+  <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;">
+    <div style="background:#7c3aed;color:#fff;padding:24px;text-align:center;">
+      <h1 style="margin:0;">🌙 Сладкие сны</h1>
+    </div>
+    <div style="padding:24px;color:#333;">
+      <h2>Здравствуйте!</h2>
+      <p>Ваша заявка на бронирование <b>№{{bookingId}}</b> успешно получена и находится на модерации.</p>
+      <table style="width:100%;border-collapse:collapse;margin:16px 0;">
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;">Номер:</td><td style="padding:8px;border-bottom:1px solid #eee;"><b>{{roomTitle}}</b></td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;">Заезд:</td><td style="padding:8px;border-bottom:1px solid #eee;">{{checkIn}}</td></tr>
+        <tr><td style="padding:8px;border-bottom:1px solid #eee;">Выезд:</td><td style="padding:8px;border-bottom:1px solid #eee;">{{checkOut}}</td></tr>
+        <tr><td style="padding:8px;">Итого:</td><td style="padding:8px;"><b>{{totalPrice}} ₽</b></td></tr>
+      </table>
+      <p>Мы свяжемся с вами после проверки заявки администратором.</p>
+      <a href="{{clientUrl}}" style="display:inline-block;background:#7c3aed;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;">Перейти в личный кабинет</a>
+    </div>
+    <div style="background:#f4f4f4;padding:16px;text-align:center;font-size:12px;color:#888;">
+      © Гостиница «Сладкие сны». Письмо отправлено автоматически.
+    </div>
+  </div>
+</body>
+</html>
