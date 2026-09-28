@@ -1,3 +1,4 @@
+
 {
   "name": "sweet-dreams-server",
   "version": "1.0.0",
@@ -28,4 +29,9 @@
     "testEnvironment": "node",
     "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
   }
+}
+=======
+"scripts": {
+  "start": "node app.js",
+  "dev": "nodemon app.js"
 }
