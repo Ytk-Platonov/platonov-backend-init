@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head><meta charset="UTF-8"><title>Бронирование отклонено</title></head>
+<body style="font-family: Arial, sans-serif; background:#f4f4f4; padding:20px;">
+  <div style="max-width:600px;margin:0 auto;background:#fff;border-radius:8px;overflow:hidden;">
+    <div style="background:#dc2626;color:#fff;padding:24px;text-align:center;">
+      <h1 style="margin:0;">❌ Бронирование отклонено</h1>
+    </div>
+    <div style="padding:24px;color:#333;">
+      <h2>Здравствуйте!</h2>
+      <p>К сожалению, ваша заявка <b>№{{bookingId}}</b> на номер «{{roomTitle}}» была отклонена.</p>
+      <p><b>Период:</b> {{checkIn}} — {{checkOut}}</p>
+      <div style="background:#fee2e2;border-left:4px solid #dc2626;padding:12px;margin:16px 0;border-radius:4px;">
+        <b>Причина:</b> {{reason}}
+      </div>
+      <p>Вы можете выбрать другой номер или другие даты на нашем сайте.</p>
+      <a href="{{clientUrl}}" style="display:inline-block;background:#7c3aed;color:#fff;padding:12px 24px;border-radius:6px;text-decoration:none;">Выбрать другой номер</a>
+    </div>
+    <div style="background:#f4f4f4;padding:16px;text-align:center;font-size:12px;color:#888;">
+      © Гостиница «Сладкие сны». Письмо отправлено автоматически.
+    </div>
+  </div>
+</body>
+</html>
